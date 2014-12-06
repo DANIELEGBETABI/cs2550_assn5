@@ -1,0 +1,17 @@
+body {
+	margin: 30px;
+}
+h1, h3 {
+	color: #0066FF;
+}
+#objects {
+	list-style-type: none;
+}
+#controllers {
+	list-style-type: none;
+}
+#cellDiv{
+	position: relative;
+	top: 0;
+	width: 100px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html!>
+<html>
+	<head>
+		<title>Grid Page</title>
+		<style>
+			td {
+				width: 160px;
+				height: 230px;
+				border: 5px solid black;
+				border-radius: 5px;
+				text-align: center;
+				font-size: 25;
+			}
+			#Red {
+				background: url('images/RedBee.jpg');
+			}
+			#Blue {
+				background: url('images/BeeBlue.jpg');
+			}
+			#cellDiv {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100;
+			}
+		</style>
+		<script src="scripts/model.js"></script>
+		<script src="scripts/view.js"></script>
+		<script src="scripts/animate.js"></script>
+		<script>window.onload = beginMove;</script>
+	</head>
+	<body>
+		<h1>Concentration Game</h1>
+		<h2>Grid Generator</h2>
+		<hr />
+		<form id="gridForm" name="gridForm" onsubmit="showView()">
+			<label for="gridSize">Grid Size (even numbers less than 6):</label>
+			<input type="text" name="gridSize" form="gridForm" id="gridSize" />
+			<label for="cardColor">Card Color:</label>
+			<select name="cardColor" form="gridForm" id="cardColor">
+				<option value="Red">Red</option>
+				<option value="Blue">Blue</option>
+			</select>
+			<button type="submit" onclick="return showView()">Submit</button>
+		</form>
+		<div id="gridDiv">
+		</div>
+		<div id="cellDiv">Cells: <span id="cellOut"></span></div>
+	</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html!>
+<html>
+	<head>
+		<title>Concentration - Description</title>
+		<link rel='stylesheet' type='text/css' href='styles/styles.css'>
+	</head>
+	<body>
+		<h1>Concentration Game</h1>
+		<h2>Game Description</h2>
+		<hr>
+		<img src="images/linuxconcentration.png" alt="http://www.pd4pic.com/images/memory-card-board-game-concentration-pairs.png" />
+	<h3>What is Concentration?</h2>
+		<p>According to <a href="http://en.wikipedia.org/wiki/Concentration_%28game%29" target="_blank">wikipedia</a>, Concentration is...</p>
+		<p> a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards. Concentration can be played with any number of players or as solitaire and is an especially good game for young children, though adults may find it challenging and stimulating as well. The scheme is often used in quiz shows and can be employed as an educational game.</p>
+		<h3>Rules of Concentration</h3>
+		<ol>
+			<li>A deck of cards is laid face-down into and 8x8 square.</li>
+			<li>Each player takes a turn flipping two cards over.</li>
+			<li>If the two cards chosen are a matching pair, the player keeps those cards</li>
+			<li>If the two cards are not a matching pair, the player returns the cards face-down to their original position, and the next turn begins.</li>
+			<li>Once all posible pairs have been found the players count up their cards. The player with the most cards is the winner</li>
+		</ol>
+		<h3>Preliminary Software Design</h3>
+		<h4>Models</h4>
+		<ul id="objects">
+			<li>Name: User</li>
+			<li>Attributes:
+				<ul>
+					<li>int score</li>
+					<li>int turns</li>
+					<li>Date timer</li>
+				</ul>
+			</li>
+			<br>
+			<li>Name: Board</li>
+			<li>Attributes:
+				<ul>
+					<li>int size</li>
+					<li>array[][] boardArray</li>
+				</ul>
+			</li>
+		</ul>
+		<h4>Views</h4>
+		Click <a href="grid.html">here </a>to see a mockup view of the game grid.
+		<h4>Controllers</h4>
+		<ul id='controllers'>
+			<li>Name: User</li>
+			<li>Methods:
+				<ul>
+					<li>User():void //constructs a User object</li>
+					<li>addScore():void //increments user's score</li>
+					<li>getScore():int //returns users's score</li>
+				</ul>
+			</li>
+			<br>
+			<li>Name: Board</li>
+			<li>Methods:
+				<ul>
+					<li>isMatch(array[][]):boolean //checks if the two selections are matches</li>
+					<li>setChoice(int):void //sets a choice into an array and increments choice count</li>
+					<li>clearChoice():boolean //returns true if choice array was full and then emptied</li>
+
+				</ul>
+			</li>
+		</ul>
+	</body>
+</html>
